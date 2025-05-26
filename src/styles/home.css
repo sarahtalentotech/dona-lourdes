@@ -1,0 +1,187 @@
+/* home.css */
+#home {
+    display: flex;
+    min-height: calc(100vh - 91px);
+    position: relative;
+  }
+  
+  #cta {
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    margin-top: 5%;
+  }
+  
+  #cta .title {
+    font-size: 4rem;
+    color: var(--color-neutral-1);
+    text-decoration: none;
+  }
+  
+  #cta .title span {
+    color: var(--color-primary-6);
+  }
+  
+  #cta .description {
+    font-size: 1.2rem;
+    color: var(--color-neutral-1);
+    text-decoration: none;
+  }
+  
+  #cta_buttons {
+    display: flex;
+    gap: 24px;
+  }
+  
+  #cta_buttons a {
+    text-decoration: none;
+    color: var(--color-neutral-1);
+  }
+  
+  #phone_button {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 8px 14px;
+    font-weight: 500;
+    box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+  }
+  
+  #phone_button button {
+    box-shadow: none;
+  }
+  
+  #banner {
+    display: flex;
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
+    width: 100%; /* Largura total da tela */
+    position: absolute; /* Garante que o banner seja posicionado em relação ao seu container */
+    top: -80px; /* Ajusta o valor para mover o banner mais para baixo (ajuste conforme necessário) */
+    left: 0; /* Posiciona o banner na borda esquerda */
+    z-index: -1; /* Coloca o banner atrás dos textos */
+  }
+  
+  #banner img {
+    width: 100%; /* A largura ocupa 100% do banner */
+    height: auto; /* Mantém a proporção original da imagem */
+    object-fit: cover; /* Faz a imagem cobrir toda a área do banner sem distorcer */
+    max-height: 700px; /* Aumenta a altura máxima para que a imagem ocupe mais espaço, mas sem cortar */
+  }
+  
+  /* Estilos APENAS para telas menores que 1170px */
+  @media screen and (max-width: 1170px) {
+    body {
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+      padding-left: 0 !important; /* Garante que não haja padding esquerdo no body */
+      padding-right: 0 !important; /* Garante que não haja padding direito no body */
+    }
+  
+    #home {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      min-height: auto;
+      padding-top: 20px;
+      position: relative;
+      text-align: left;
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+      padding-left: 0 !important; /* Garante que não haja padding esquerdo no #home */
+      padding-right: 0 !important; /* Garante que não haja padding direito no #home */
+    }
+  
+    #banner {
+      order: 1;
+      width: 100vw; /* Ocupa toda a largura da viewport */
+      position: relative;
+      margin-top: 15%; /* Ajuste conforme necessário */
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+    }
+  
+    #banner img {
+      width: 100vw; /* A imagem ocupa toda a largura da viewport */
+      height: auto;
+      object-fit: cover; /* Garante que a imagem cubra a área */
+      min-height: 60vh; /* Expande a altura da imagem (ajuste conforme necessário) */
+    }
+  
+    #cta {
+      order: 2;
+      width: 90%;
+      position: absolute;
+      top: 2%; /* Ajuste conforme necessário */
+      left: 5%;
+      transform: translateX(0);
+      z-index: 1;
+      background-color: transparent;
+      padding: 15px; /* Reduz o padding do texto */
+      border-radius: 0;
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px; /* Reduz o espaçamento entre os itens do texto */
+    }
+  
+    #cta .title {
+      font-size: 2rem; /* Diminui o tamanho do título */
+    }
+  
+    #cta .description {
+      font-size: 0.8rem; /* Diminui o tamanho da descrição */
+    }
+  
+    #cta a {
+      text-decoration: none;
+      color: var(--color-neutral-1);
+      font-size: 0.9rem; /* Diminui o tamanho da fonte dos links */
+    }
+  
+    #cta_buttons {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 8px; /* Reduz o espaçamento entre os botões */
+      width: 100%;
+    }
+  
+    #cta_buttons a {
+      width: auto;
+      padding: 8px 12px; /* Reduz o padding dos botões */
+      font-size: 0.9rem; /* Diminui o tamanho da fonte dos botões */
+    }
+  
+    #phone_button {
+      width: auto;
+      justify-content: flex-start;
+      padding: 8px 12px; /* Reduz o padding do botão de telefone */
+      font-size: 0.9rem; /* Diminui o tamanho da fonte do botão de telefone */
+    }
+  
+    #banner,
+    #home .shape {
+      display: block;
+    }
+  }
+  
+  @media screen and (max-width: 450px) {
+    #cta .title {
+      font-size: 1.8rem;
+    }
+  
+    #cta .description {
+      font-size: 0.7rem;
+    }
+  }
+  
+  #home .shape {
+    display: none;
+  }
+
+  

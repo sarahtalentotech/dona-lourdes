@@ -1,0 +1,1497 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Bodoni:ital,wght@0,400;1,400&display=swap');
+@import url('header.css');
+@import url('home.css');
+@import url('menu.css');
+@import url('testimonials.css');
+@import url('footer.css');
+
+:root {
+    --color-primary-1: #e6e3d9;
+    --color-primary-2: #e6e3d9;
+    --color-primary-3: #a8c99c;
+    --color-primary-4: #4a6b3c;
+    --color-primary-5: #4a6b3c;
+    --color-primary-6: #4a6b3c;
+
+    --color-neutral-0: #fff;
+    --color-neutral-1: #1d1d1d;
+}
+
+* {
+    font-family: 'Telegraf', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--color-primary-1);
+}
+
+section {
+    padding: 28px 8%;
+}
+
+.btn-default {
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-primary-5);
+    border-radius: 12px;
+    padding: 10px 14px;
+    font-weight: 600;
+    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: background-color .3s ease;
+}
+
+.btn-default:hover {
+    background-color: var(--color-primary-3);
+}
+
+.social-media-buttons {
+    display: flex;
+    gap: 18px;
+}
+
+.social-media-buttons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 40px;
+    background-color: var(--color-neutral-0);
+    font-size: 1.25rem;
+    border-radius: 10px;
+    text-decoration: none;
+    color: var(--color-neutral-1);
+    ;
+    box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow .3s ease;
+}
+
+.social-media-buttons a:hover {
+    box-shadow: 0px 0px 12px 8px rgba(0, 0, 0, 0.1);
+}
+
+.section-title {
+    color: var(--color-primary-6);
+    font-size: 1.563rem;
+}
+
+.section-subtitle {
+    font-size: 2.1875rem;
+}
+
+/* Estilos para telas menores que 768 pixels (tablets e celulares) */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 1.25rem;
+        /* Diminua o tamanho do título da seção */
+    }
+
+    .section-subtitle {
+        font-size: 1.75rem;
+        /* Diminua o tamanho do subtítulo da seção */
+    }
+
+    .btn-default {
+        padding: 8px 12px;
+        /* Diminua o padding do botão */
+        font-size: 0.9rem;
+        /* Diminua o tamanho da fonte do botão */
+    }
+
+    .social-media-buttons a {
+        width: 35px;
+        /* Diminua a largura dos botões sociais */
+        height: 30px;
+        /* Diminua a altura dos botões sociais */
+        font-size: 1rem;
+        /* Diminua o tamanho dos ícones sociais */
+    }
+
+    .social-media-buttons {
+        gap: 12px;
+        /* Diminua o espaçamento entre os botões sociais */
+    }
+
+    section {
+        padding: 20px 5%;
+        /* Diminua o padding das seções */
+    }
+}
+
+
+
+
+#whatsapp-alert {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #4a6b3c;
+    color: white;
+    padding: 20px 30px;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-align: center;
+    display: none;
+    z-index: 9999;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(0.95);
+        opacity: 0.7;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+#whatsapp-aviso {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 30px;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    text-align: center;
+    border-radius: 10px;
+    width: 90%;
+    /* Aumenta a largura */
+    max-width: 400px;
+    /* Limita a largura máxima */
+    height: auto;
+    /* Altura ajustável */
+    box-sizing: border-box;
+}
+
+#whatsapp-aviso p {
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 1.1em;
+    color: #333;
+}
+
+#whatsapp-aviso a {
+    display: block;
+    margin-bottom: 20px;
+    color: #007bff;
+    text-decoration: none;
+    font-size: 0.9em;
+}
+
+#whatsapp-aviso a:hover {
+    text-decoration: underline;
+}
+
+#whatsapp-aviso button {
+    padding: 12px 20px;
+    margin: 0 10px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 0.95em;
+    transition: background-color 0.3s ease;
+}
+
+#whatsapp-ciente {
+    background-color: #7A944B;
+    color: white;
+}
+
+#whatsapp-ciente:hover {
+    background-color: #617A3B;
+}
+
+#fechar-aviso {
+    background-color: #A94438;
+    color: white;
+}
+
+#fechar-aviso:hover {
+    background-color: #75291C;
+}
+
+@media (max-width: 600px) {
+    #whatsapp-aviso {
+        width: 95vw;
+        height: auto;
+        /* max-height: 260px;  REMOVIDO */
+        padding: 12px;
+        font-size: 0.85rem;
+        border-radius: 20px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        text-align: center;
+        overflow-y: visible; /* ALTERADO */
+        gap: 10px;
+    }
+
+    #whatsapp-aviso button {
+        padding: 6px 10px;
+        font-size: 0.75rem;
+        margin: 4px 0;
+        width: 100%;
+        max-width: 200px;
+    }
+
+    #whatsapp-aviso p,
+    #whatsapp-aviso a {
+        font-size: 0.75rem;
+        margin-bottom: 8px;
+    }
+}
+
+
+
+
+.menu-navigation {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    justify-content: center;
+    /* Centraliza os botões */
+}
+
+.category-button {
+    background-color: var(--color-primary-1);
+    /* Cor de fundo clara */
+    color: var(--color-primary-6);
+    /* Cor do texto primária */
+    border: 1px solid var(--color-primary-3);
+    /* Borda sutil */
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.category-button.active,
+.category-button:hover {
+    background-color: var(--color-primary-3);
+    /* Cor de destaque ao ativar ou passar o mouse */
+    color: var(--color-neutral-0);
+    /* Texto branco em destaque */
+    border-color: var(--color-primary-5);
+    /* Borda mais forte */
+}
+
+.dish {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #fdf8ee;
+    box-sizing: border-box;
+    /* Garanta que padding/border não causem estouro */
+}
+
+.dish-image-container {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    /* Força a proporção quadrada */
+    overflow: hidden;
+}
+
+.dish-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.dish-content {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+
+.dish-title {
+    font-size: 1.1em;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.dish-description {
+    font-size: 0.9em;
+    color: #777;
+    margin-bottom: 10px;
+    flex-grow: 1;
+}
+
+.dish-price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dish-price h4 {
+    color: var(--color-primary-5);
+    font-size: 1.2em;
+    margin-right: 10px;
+}
+
+.dish-heart {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.2em;
+    color: #ccc;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.dish-heart i.fa-solid.fa-heart {
+    color: var(--color-primary-2);
+}
+
+.dish-rate {
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+    font-size: 0.8em;
+    color: #ffc107;
+}
+
+.dish-rate i {
+    margin-right: 2px;
+}
+
+.dish-rate span {
+    color: #999;
+    margin-left: 5px;
+}
+
+
+
+#menu {
+    padding-bottom: 40px;
+    /* Adiciona um pouco de espaço na parte inferior para a barra de rolagem não cobrir o último item */
+}
+
+.menu-categories {
+    display: flex;
+    /* Garante que as categorias fiquem lado a lado (se houver várias) */
+    gap: 20px;
+    /* Espaçamento entre as categorias (se houver) */
+    padding: 20px;
+    /* Adiciona um pouco de padding interno */
+}
+
+.category {
+    flex-shrink: 0;
+    /* Impede que as categorias encolham */
+    width: auto;
+    /* A largura da categoria se ajusta ao conteúdo */
+}
+
+.category-title {
+    /* Estilos para o título da categoria */
+    margin-bottom: 15px;
+}
+
+.category .dishes {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding-bottom: 20px;
+    align-items: stretch;
+}
+
+.dish {
+    flex-shrink: 0;
+    /* Já deve ter isso */
+    width: 300px;
+    /* Já deve ter isso */
+    display: flex;
+    /* Para organizar o conteúdo interno verticalmente */
+    flex-direction: column;
+    background-color: #fdf8ee;
+}
+
+.dish-content {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* Empurra o preço para baixo */
+    flex-grow: 1;
+    /* Faz o conteúdo crescer para ocupar o espaço restante */
+}
+
+
+.menu-navigation-arrows {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    right: 10px;
+    transform: translateY(-50%);
+}
+
+.arrow-button {
+    background: rgba(255, 255, 255, 0.8);
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.arrow-button:hover {
+    opacity: 1;
+}
+
+.menu-categories .category {
+    display: none;
+    /* esconde por padrão */
+}
+
+.menu-categories .category[data-category="verduras-e-legumes"] {
+    display: block;
+    /* mostra a categoria ativa sem interferir no grid interno */
+}
+
+
+@media (max-width: 768px) {
+    .category .dishes {
+        grid-template-columns: repeat(2, 1fr);
+        /* Celular: 2 por linha */
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .dish {
+        width: 100%;
+        /* Preenche a coluna do grid */
+        max-width: 100%;
+        /* Remove qualquer limitação */
+        box-sizing: border-box;
+    }
+
+    .dish .dish-image {
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 5px;
+    }
+
+
+    .dish {
+        max-width: 100%;
+        /* ou remova esta linha completamente */
+        width: 100%;
+        /* importante para se ajustar à coluna do grid */
+    }
+
+
+    .dish .dish-image {
+        max-width: 100%;
+        /* A imagem ocupa a largura total do bloco .dish */
+        height: auto;
+        margin-bottom: 5px;
+    }
+
+    .dish .dish-title {
+        font-size: 1em;
+        margin-bottom: 5px;
+        color: #333
+    }
+
+    .dish .dish-description {
+        font-size: 0.8em;
+        margin-bottom: 8px;
+    }
+
+    .dish .dish-price h4 {
+        font-size: 0.9em;
+    }
+
+    .dish .btn-default {
+        font-size: 0.7em;
+        padding: 5px 10px;
+    }
+
+    .dish .dish-rate {
+        font-size: 0.7em;
+        margin-bottom: 5px;
+    }
+}
+
+
+
+
+#dona-lourdes {
+    display: flex;
+    align-items: center;
+    padding: 40px 8%;
+    background-color: #7B4F32;
+    margin-top: 80px;
+    /* Adicione esta linha */
+}
+
+/* Por exemplo, se você já tem uma para max-width: 480px, pode usar essa */
+#dona-lourdes {
+    display: flex;
+    /* Mantemos o flex para organizar imagem e texto lado a lado */
+    align-items: center;
+    /* Alinha verticalmente os itens */
+    padding: 40px 8%;
+    background-color: #7B4F32;
+    /* Mantemos o fundo marrom aqui, já que você gostou */
+}
+
+#chef-lourdes {
+    max-width: 40%;
+    /* A imagem pode ocupar até 50% da largura do container pai */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-right: 40px;
+    /* Espaço entre a imagem e o texto */
+}
+
+#historia-content {
+    max-width: 50%;
+    /* O texto ocupa o restante da largura */
+}
+
+#historia-content .section-title {
+    margin-bottom: 10px;
+    color: var(--color-primary-1);
+    /* Texto claro no fundo marrom */
+}
+
+#historia-content .section-subtitle {
+    margin-bottom: 20px;
+    color: #3A2B17
+        /* Uma cor para destacar o subtítulo */
+}
+
+#historia-texto p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: var(--color-primary-1);
+    /* Texto claro no fundo marrom */
+}
+
+/* Estilos responsivos para telas menores */
+@media (max-width: 768px) {
+    #dona-lourdes {
+        flex-direction: column;
+        /* Empilha imagem e texto */
+        text-align: center;
+        padding: 30px 5%;
+    }
+
+    #chef-lourdes {
+        max-width: 80%;
+        /* A imagem ocupa mais largura em telas menores */
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    #historia-content {
+        max-width: 100%;
+        /* O texto ocupa toda a largura */
+        text-align: left;
+        /* Alinha o texto à esquerda em telas menores */
+    }
+}
+
+
+/* =======================
+   ESCONDER CATEGORIAS
+========================== */
+.category {
+    display: none;
+    /* todas começam escondidas */
+    min-height: 200px;
+    padding: 20px 0;
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        /* Termina visível e na posição original */
+    }
+}
+
+/*Animação para aparecer deslizando da esquerda*/
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.fade-left {
+    opacity: 0;
+    transform: translateX(-50px);
+    pointer-events: none;
+    /* evita clique antes da animação */
+    visibility: hidden;
+}
+
+.fade-left.animated {
+    animation: slideInLeft 0.8s ease-out forwards;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.dish-price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+/* Botões com cores e hover */
+.btn-default {
+    background-color: #264d2c;
+    /* mesmo tom do botão verde */
+    border: none;
+    border-radius: 12px;
+    padding: 8px 12px;
+    cursor: pointer;
+    color: white;
+    transition: background 0.3s ease;
+}
+
+.btn-default:hover {
+    background-color: #3a6e42;
+}
+
+
+
+/* ==================================================
+   ESTILIZAÇÃO DO CARRINHO FIXO
+===================================================== */
+.cart {
+    position: fixed;
+    right: 20px;
+    top: 100px;
+    width: 300px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    max-height: 80vh;
+    overflow-y: auto;
+    border-radius: 8px;
+    font-family: sans-serif;
+    color: #333;
+    /* O carrinho fica sempre visível no canto superior direito da tela,
+    com tamanho definido e rolagem se o conteúdo passar da altura máxima. */
+}
+
+.cart h2 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+/* Lista dentro do carrinho  */
+.cart ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 15px;
+}
+
+/* Itens da lista */
+.cart li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+    /* Separador sutil entre os itens */
+}
+
+.cart li:last-child {
+    border-bottom: none;
+}
+
+/* Imagens dentro dos itens */
+.cart li img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+/* Texto e destaque dentro do item */
+.cart li span {
+    flex-grow: 1;
+}
+
+.cart li strong {
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+/* Botão remover item */
+.cart li button {
+    background: none;
+    border: none;
+    color: #dc3545;
+    font-size: 1.2em;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.cart li button:hover {
+    opacity: 0.8;
+}
+
+/* Total do carrinho */
+.cart p#cart-total {
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: right;
+    margin-bottom: 20px;
+    color: #4CAF50;
+}
+
+/* =======================
+   BOTÕES DE AÇÃO NO CARRINHO
+========================== */
+.cart button#clear-cart,
+.cart button#btn-finalizar-carrinho {
+    display: block;
+    width: 100%;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.cart button#clear-cart {
+    background-color: #A94438;
+}
+
+.cart button#clear-cart:hover {
+    background-color: #75291C;
+}
+
+.cart button#btn-finalizar-carrinho {
+    background-color: #7A944B;
+}
+
+.cart button#btn-finalizar-carrinho:hover {
+    background-color: #617A3B;
+}
+
+/* ==================================================
+   ESTILIZAÇÃO DO CARRINHO FIXO
+===================================================== */
+.cart {
+    position: fixed;
+    right: 20px;
+    top: 100px;
+    width: 300px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    max-height: 80vh;
+    overflow-y: auto;
+    border-radius: 8px;
+    font-family: sans-serif;
+    color: #333;
+}
+
+.cart h2 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.cart ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 15px;
+}
+
+.cart li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.cart li:last-child {
+    border-bottom: none;
+}
+
+.cart li img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+.cart li span {
+    flex-grow: 1;
+}
+
+.cart li strong {
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+.cart li button {
+    background: none;
+    border: none;
+    color: #dc3545;
+    font-size: 1.2em;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.cart li button:hover {
+    opacity: 0.8;
+}
+
+.cart p#cart-total {
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: right;
+    margin-bottom: 20px;
+    color: #4CAF50;
+}
+
+.cart button#clear-cart,
+.cart button#btn-finalizar-carrinho {
+    display: block;
+    width: 100%;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.cart button#clear-cart {
+    background-color: #A94438;
+}
+
+.cart button#clear-cart:hover {
+    background-color: #75291C;
+}
+
+.cart button#btn-finalizar-carrinho {
+    background-color: #7A944B;
+}
+
+.cart button#btn-finalizar-carrinho:hover {
+    background-color: #617A3B;
+}
+
+/* =======================
+   MODAL DE INFORMAÇÕES DO CLIENTE
+========================== */
+#info-modal.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    padding: 20px;
+}
+
+#info-modal .modal-content {
+    background: #ffffffcc;
+    backdrop-filter: blur(6px);
+    padding: 20px;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 400px;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    animation: fadeInScale 0.3s ease forwards;
+}
+
+#info-modal h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #444;
+}
+
+#info-modal label {
+    display: block;
+    margin-top: 12px;
+    margin-bottom: 4px;
+    font-weight: 500;
+}
+
+#info-modal input,
+#info-modal select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    background-color: #fff;
+}
+
+#info-modal .btn-confirm,
+#info-modal .btn-cancel {
+    width: 48%;
+    padding: 12px;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 15px;
+    border: none;
+}
+
+#info-modal .btn-confirm {
+    background-color: #637c3f;
+    color: white;
+}
+
+#info-modal .btn-confirm:hover {
+    background-color: #506b31;
+}
+
+#info-modal .btn-cancel {
+    background-color: #ccc;
+    color: #333;
+}
+
+#info-modal .btn-cancel:hover {
+    background-color: #aaa;
+}
+
+/* Alinhar os botões lado a lado */
+#info-modal .modal-content button + button {
+    margin-left: 4%;
+}
+
+@media (max-width: 480px) {
+    #info-modal .btn-confirm,
+    #info-modal .btn-cancel {
+        width: 100%;
+        margin: 10px 0 0 0;
+    }
+
+    #info-modal .modal-content button + button {
+        margin-left: 0;
+    }
+}
+
+
+/* =================================
+   ESTILOS PARA MODAL (JANELA POPUP)
+==================================== */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    padding: 20px;
+}
+
+.modal-content,
+#payment-modal-lista.two {
+    background: #ffffffcc;
+    backdrop-filter: blur(6px);
+    padding: 20px;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 400px;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    animation: fadeInScale 0.3s ease forwards;
+}
+
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+#payment-modal-lista h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    text-align: center;
+    color: #444;
+}
+
+#payment-modal-lista h3 {
+    font-size: 1.1rem;
+    margin: 20px 0 10px;
+    text-align: center;
+    color: #555;
+}
+
+#resumo-pedido {
+    margin-bottom: 20px;
+}
+
+#resumo-pedido ul {
+    list-style: disc;
+    padding-left: 20px;
+    margin-bottom: 15px;
+}
+
+#resumo-pedido li {
+    margin-bottom: 6px;
+    font-size: 0.95rem;
+}
+
+/* Formas de pagamento */
+.payment-option {
+    margin: 8px 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+
+/* Estilo para o QR Code */
+#pix-info img {
+    max-width: 100%;
+    height: auto;
+    margin: 10px 0;
+    border-radius: 6px;
+    border: 1px solid #eee;
+}
+
+#pix-info p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+/* Campo de troco */
+#troco-valor {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    width: 100%;
+    margin-top: 5px;
+    font-size: 1rem;
+    background-color: #fff;
+}
+
+/* Botão de confirmar */
+#confirmar-pagamento {
+    background-color: #637c3f;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 20px;
+    font-size: 1rem;
+}
+
+#confirmar-pagamento:hover {
+    background-color: #506b31;
+}
+
+/* Esconder botão fantasma */
+#botao-espaco {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Scroll elegante */
+#payment-modal-lista::-webkit-scrollbar {
+    width: 6px;
+}
+#payment-modal-lista::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 3px;
+}
+
+/* Responsivo */
+@media (max-height: 500px) {
+    .modal-content,
+    #payment-modal-lista {
+        max-height: 80vh;
+    }
+}
+
+
+/* =======================
+   CARTÕES DE PRODUTO
+========================== */
+.produto-card {
+    position: relative;
+    width: 150px;
+    margin: 10px;
+    text-align: center;
+    display: inline-block;
+}
+
+.produto-card img {
+    width: 100%;
+    transition: 0.3s ease all;
+    border-radius: 8px;
+}
+
+.produto-indisponivel img {
+    filter: grayscale(100%);
+    opacity: 0.6;
+}
+
+/*Texto "Indisponível" aparece sobreposto no
+centro da imagem com fundo branco
+semi-transparente.*/
+.produto-indisponivel::after {
+    content: 'Indisponível';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
+    font-weight: bold;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+/* Estilos específicos para lista e total no carrinho */
+
+#cart-items li {
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+}
+
+#cart-total {
+    font-weight: bold;
+}
+
+#payment-modal-lista {
+    background: none;
+    /* Tirar o bege, fundo branco */
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 400px;
+    width: 90%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+    /* Sombra suave */
+    font-family: 'Roboto', sans-serif;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+}
+
+#payment-modal-lista,
+#payment-modal-lista * {
+    font-family: 'Roboto', sans-serif;
+}
+
+#modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 9998;
+}
+
+.cart {
+    display: none;
+}
+
+.cart.show {
+    display: block;
+}
+
+
+
+/* =======================
+   SEÇÃO: REPRESENTANTES
+========================== */
+
+
+
+#representantes {
+    background-color: #e6e3d9;
+    padding: 40px 20px;
+}
+
+.section-title,
+.section-subtitle {
+    text-align: center;
+}
+
+.section-subtitle {
+    margin-bottom: 30px;
+}
+
+.representante-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    animation: fadeInUp 1s ease forwards;
+}
+
+.representante {
+    text-align: center;
+    max-width: 200px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+.representante:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.representante:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.representante:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.representante:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.representante img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+}
+
+.representante img:hover {
+    transform: scale(1.05);
+}
+
+.representante p {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #333;
+}
+
+.representante p strong {
+    display: block;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.representante small {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Modal de Informações dos Representantes */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.representante-modal-content {
+    background: white;
+    padding: 10px 20px;
+    text-align: center;
+    max-width: 60%;
+    max-height: 70%;
+    overflow-y: auto;
+    border-radius: 10px;
+    position: relative;
+}
+
+.representante-modal-content img {
+    max-width: 100%;
+    max-height: 50vh;
+    margin-top: 10px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* ========================
+   RESPONSIVIDADE DOS REPRESENTANTES
+=========================== */
+
+@media (max-width: 768px) {
+    .representante-modal-content {
+        max-width: 80%;
+        max-height: 80%;
+    }
+
+    .representante-modal-content img {
+        max-height: 40vh;
+    }
+
+    .close-btn {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .representante-modal-content {
+        max-width: 90%;
+        max-height: 90%;
+        padding: 10px 15px;
+    }
+
+    .representante-modal-content img {
+        max-height: 35vh;
+    }
+
+    .close-btn {
+        font-size: 16px;
+    }
+}
+
+
+.modal-overlay-endereco {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+.modal-content-endereco {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 400px;
+    width: 90%;
+}
+
+.modal-content-endereco label {
+    display: block;
+    margin-top: 10px;
+}
+
+.modal-content-endereco input, .modal-content select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.carousel {
+  position: relative;
+  width: 100%;
+  overflow: hidden; /* Isso é essencial */
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
+}
+
+.slides img {
+  width: 100%;
+  flex-shrink: 0;
+}
