@@ -1,0 +1,1938 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="src/styles/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <title>Landing page</title>
+</head>
+
+<body>
+    <header>
+        <nav id="navbar">
+            <a href="#" id="nav_logo">
+                <img src="src/images/logo.png" alt="Logo">
+            </a>
+
+
+            <ul id="nav_list">
+                <li class="nav-item active">
+                    <a href="#home">Início</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#menu">Cardápio</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#testimonials">Avisos</a>
+                </li>
+            </ul>
+
+            <button id="botao-espaco" class="btn-default">
+            </button>
+
+            <button id="mobile_btn">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </nav>
+
+        <div id="mobile_menu">
+            <ul id="mobile_nav_list">
+                <li class="nav-item">
+                    <a href="#home">Início</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#menu">Cardápio</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#testimonials">Avaliações</a>
+                </li>
+                <div class="menu-navigation-arrows">
+                    <button class="arrow-button left-arrow">&lt;</button>
+                    <button class="arrow-button right-arrow">&gt;</button>
+                </div>
+            </ul>
+
+            <button class="btn-default">
+                Peça aqui
+            </button>
+        </div>
+    </header>
+
+    <main id="content">
+        <section id="home">
+            <div class="shape"></div>
+            <div id="cta" style="width: 40%;">
+                <h1 class="title" style="color: white;">
+                    Compre online, receba em
+                    <span>casa!</span>
+                </h1>
+
+                <p class="description" style="color: white;">
+                    Do trabalho de Lourdes à qualidade dos produtos,
+                    a tradição que você ama, agora online.
+                </p>
+
+                <div id="cta_buttons">
+                    <a href="#" class="btn-default" id="ver-cardapio">
+                        Ver cardápio
+                    </a>
+
+                    <a href="#" id="phone_button">
+                        <button class="btn-default">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </button>
+                        Prefere pedir pelo Whatsapp?
+                    </a>
+                </div>
+
+
+                <!-- AVISO DO WHATSAPP E BOTÕES MEDIAS -->
+
+                <div id="whatsapp-aviso"
+                    style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: white; padding: 30px; border: 1px solid #ccc; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); z-index: 1000; text-align: center; border-radius: 10px; width: 80%; max-width: 400px;">
+                    <p>🥳 <b>Atenção!</b> Sabia que comprando pelo site você economiza ainda mais? 😉</p>
+                    <p>Pelo site, o pedido sai <strong> 5% mais barato</strong> do que pelo WhatsApp!</p>
+                    <a href="[LINK DO SEU TUTORIAL DO YOUTUBE]" target="_blank">Precisa de ajuda? Clique aqui para ver o
+                        tutorial de como pedir pelo site.</a>
+                    <br><br>
+                    <button id="whatsapp-ciente">Ciente, quero pedir pelo WhatsApp</button>
+                    <button id="fechar-aviso">Cancelar</button>
+                </div>
+
+           <div class="social-media-buttons">
+    <a href="https://wa.me/554391422338?text=Ol%C3%A1%2C%20Dona%20Lourdes!%20Quero%20montar%20minha%20cesta%20semanal%20%F0%9F%98%8A" target="_blank" title="WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <a href="https://www.instagram.com/horti_lourdes?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" title="Instagram">
+        <i class="fa-brands fa-instagram"></i>
+    </a>
+
+    <a href="https://www.facebook.com/seuPerfilOuPagina" target="_blank" title="Facebook">
+        <i class="fa-brands fa-facebook"></i>
+    </a>
+</div>
+iv>
+            </div>
+
+
+            <!-- BANNER -->
+            <div id="banner">
+                <img src="src/images/hero.png" alt="">
+            </div>
+        </section>
+
+
+        <!-- MENU -->
+        <section id="menu">
+            <h2 class="section-title">Cardápio</h2>
+            <h3 class="section-subtitle">Navegue por nossas categorias:</h3>
+
+            <div class="menu-navigation">
+                <button class="category-button active" data-category="verduras-e-legumes">Verduras e Legumes</button>
+                <button class="category-button" data-category="frutas">Frutas</button>
+                <button class="category-button" data-category="geleias-e-cremes">Geleias/Cremes</button>
+                <button class="category-button" data-category="paes-e-quitutes">Pães e Quitutes</button>
+            </div>
+
+            <!-- VERDURAS E LEGUMES -->
+            <div class="menu-categories">
+                <div class="category" data-category="verduras-e-legumes">
+                    <div class="dishes">
+                        <div class="dish">
+                            <div class="dish-heart">
+                                <i class="fa-solid fa-heart"></i>
+                            </div>
+                            <img src="src/images/alface.png" class="dish-image" alt="Alface"
+                                data-nutritional="src/images/tabela_alface.png">
+                            <h3 class="dish-title">
+                                Alface
+                            </h3>
+                            <span class="dish-description">
+                                Folha crocante e refrescante, colhida no ponto certo.
+                                O alface da Dona Lourdes é o toque leve que sua salada precisa,
+                                com gostinho de horta caseira.
+                            </span>
+                            <div class="dish-rate">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <span>(10+)</span>
+                            </div>
+                            <div class="dish-price">
+                                <h4>R$ 3,00/maço</h4>
+                                <button class="btn-default">
+                                    <i class="fa-solid fa-basket-shopping"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="dish">
+                            <div class="dish-heart">
+                                <i class="fa-solid fa-heart"></i>
+                            </div>
+                            <img src="src/images/batata.png" class="dish-image" alt="Batata"
+                                data-nutritional="src/images/tabela_batata.png">
+                            <h3 class="dish-title">
+                                Batata
+                            </h3>
+                            <span class="dish-description">
+                                Versátil e saborosa, a batata vem fresquinha do armazém,
+                                ideal para receitas do dia a dia como purês,
+                                fritas ou ensopados cheios de afeto.
+                            </span>
+                            <div class="dish-rate">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <span>(10+)</span>
+                            </div>
+                            <div class="dish-price">
+                                <h4>R$ 3,90/kg</h4>
+                                <button class="btn-default">
+                                    <i class="fa-solid fa-basket-shopping"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="dish">
+                            <div class="dish-heart">
+                                <i class="fa-solid fa-heart"></i>
+                            </div>
+                            <img src="src/images/cenoura.png" class="dish-image" alt="Cenoura"
+                                data-nutritional="src/images/tabela_cenoura.png">
+                            <h3 class="dish-title">
+                                Cenoura
+                            </h3>
+                            <span class="dish-description">
+                                Crocante e cheia de cor, a cenoura da Dona Lourdes é colhida com cuidado,
+                                rica em vitamina A e perfeita para dar aquele toque saudável
+                                às suas saladas e cozidos.
+                            </span>
+                            <div class="dish-rate">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <span>(10+)</span>
+                            </div>
+                            <div class="dish-price">
+                                <h4>R$ 4,50/kg</h4>
+                                <button class="btn-default">
+                                    <i class="fa-solid fa-basket-shopping"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="dish">
+                            <div class="dish-heart">
+                                <i class="fa-solid fa-heart"></i>
+                            </div>
+                            <img src="src/images/abobrinha.png" class="dish-image" alt="Batata"
+                                data-nutritional="src/images/tabela_abobrinha.png">
+                            <h3 class="dish-title">
+                                Abobrinha
+                            </h3>
+                            <span class="dish-description">
+                                Levinha e saborosa, a abobrinha é colhida no ponto certo.
+                                Vai bem grelhada, refogada ou numa sopinha reconfortante.
+                            </span>
+                            <div class="dish-rate">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <span>(5+)</span>
+                            </div>
+                            <div class="dish-price">
+                                <h4>R$ 5,00/kg</h4>
+                                <button class="btn-default">
+                                    <i class="fa-solid fa-basket-shopping"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="dish">
+                            <div class="dish-heart">
+                                <i class="fa-solid fa-heart"></i>
+                            </div>
+                            <img src="src/images/tomate.png" class="dish-image" alt="Tomate"
+                                data-nutritional="src/images/tabela_tomate.png">
+                            <h3 class="dish-title">
+                                Tomate
+                            </h3>
+                            <span class="dish-description">
+                                Suculento e cheio de sabor, o tomate é a estrela das saladas e molhos.
+                                Do pé pra sua mesa, com o carinho da Dona Lourdes.
+                            </span>
+                            <div class="dish-rate">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <span>(5+)</span>
+                            </div>
+                            <div class="dish-price">
+                                <h4>R$ 6,50/kg</h4>
+                                <button class="btn-default">
+                                    <i class="fa-solid fa-basket-shopping"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="dish">
+                            <div class="dish-heart">
+                                <i class="fa-solid fa-heart"></i>
+                            </div>
+                            <img src="src/images/chuchu.png" class="dish-image" alt="Chuchu"
+                                data-nutritional="src/images/tabela_chuchu.png">
+                            <h3 class="dish-title">
+                                Chuchu
+                            </h3>
+                            <span class="dish-description">
+                                Textura suave e sabor delicado.
+                                O chuchu do armazém é o segredo das receitas leves
+                                e dos refogados cheios de sabor.
+                            </span>
+                            <div class="dish-rate">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <span>(5+)</span>
+                            </div>
+                            <div class="dish-price">
+                                <h4>R$ 3,50/kg</h4>
+                                <button class="btn-default">
+                                    <i class="fa-solid fa-basket-shopping"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="dish">
+                            <div class="dish-heart">
+                                <i class="fa-solid fa-heart"></i>
+                            </div>
+                            <img src="src/images/quiabo.png" class="dish-image" alt="Quiabo"
+                                data-nutritional="src/images/tabela_quiabo.png">
+                            <h3 class="dish-title">
+                                Quiabo
+                            </h3>
+                            <span class="dish-description">
+                                O queridinho das receitas nordestinas.
+                                Fresquinho do armazém, vai bem em refogados,
+                                ensopados e carrega aquele gostinho de casa de vó.
+                            </span>
+                            <div class="dish-rate">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <span>(5+)</span>
+                            </div>
+                            <div class="dish-price">
+                                <h4>R$ 8,50/kg</h4>
+                                <button class="btn-default">
+                                    <i class="fa-solid fa-basket-shopping"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="dish">
+                            <div class="dish-heart">
+                                <i class="fa-solid fa-heart"></i>
+                            </div>
+                            <img src="src/images/couve.png" class="dish-image" alt="Couve"
+                                data-nutritional="src/images/tabela_couve.png">
+                            <h3 class="dish-title">
+                                Couve
+                            </h3>
+                            <span class="dish-description">
+                                Verdinha, rica em ferro e cuidada com carinho.
+                                Vai bem refogada,
+                                no feijão ou no suco verde do dia a dia.
+                            </span>
+                            <div class="dish-rate">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <span>(5+)</span>
+                            </div>
+                            <div class="dish-price">
+                                <h4>R$ 3,50/maço</h4>
+                                <button class="btn-default">
+                                    <i class="fa-solid fa-basket-shopping"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="dish">
+                            <div class="dish-heart">
+                                <i class="fa-solid fa-heart"></i>
+                            </div>
+                            <img src="src/images/espinafre.png" class="dish-image" alt="Espinafre"
+                                data-nutritional="src/images/tabela_espinafre.png">
+                            <h3 class="dish-title">
+                                Espinafre
+                            </h3>
+                            <span class="dish-description">
+                                Folhas tenras, cheias de nutrientes.
+                                Ideal para omeletes, refogados ou aquele recheio especial
+                                de tortas e panquecas.
+                            </span>
+                            <div class="dish-rate">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <span>(5+)</span>
+                            </div>
+                            <div class="dish-price">
+                                <h4>R$ 4,00/maço</h4>
+                                <button class="btn-default">
+                                    <i class="fa-solid fa-basket-shopping"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="dish">
+                            <div class="dish-heart">
+                                <i class="fa-solid fa-heart"></i>
+                            </div>
+                            <img src="src/images/rucula.png" class="dish-image" alt="Rúcula"
+                                data-nutritional="src/images/tabela_rucula.png">
+                            <h3 class="dish-title">
+                                Rúcula
+                            </h3>
+                            <span class="dish-description">
+                                Sabor levemente picante e frescor garantido.
+                                Ótima para saladas que combinam com queijo,
+                                frutas e um fiozinho de azeite.
+                            </span>
+                            <div class="dish-rate">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <span>(5+)</span>
+                            </div>
+                            <div class="dish-price">
+                                <h4>R$ 4,50/maço</h4>
+                                <button class="btn-default">
+                                    <i class="fa-solid fa-basket-shopping"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="dish">
+                            <div class="dish-heart">
+                                <i class="fa-solid fa-heart"></i>
+                            </div>
+                            <img src="src/images/almeirao.png" class="dish-image" alt="Almeirao"
+                                data-nutritional="src/images/tabela_almeirao.png">
+                            <h3 class="dish-title">
+                                Almeirão
+                            </h3>
+                            <span class="dish-description">
+                                Com seu amarguinho característico,
+                                é uma explosão de sabor quando refogado.
+                                Do jeitinho que a Dona Lourdes gosta de preparar.
+                            </span>
+                            <div class="dish-rate">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <span>(5+)</span>
+                            </div>
+                            <div class="dish-price">
+                                <h4>R$ 3,50/maço</h4>
+                                <button class="btn-default">
+                                    <i class="fa-solid fa-basket-shopping"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="dish">
+                            <div class="dish-heart">
+                                <i class="fa-solid fa-heart"></i>
+                            </div>
+                            <img src="src/images/chicoria.png" class="dish-image" alt="Chicoria"
+                                data-nutritional="src/images/tabela_chicoria.png">
+                            <h3 class="dish-title">
+                                Chicória
+                            </h3>
+                            <span class="dish-description">
+                                Folhas firmes e cheias de personalidade.
+                                Vai bem refogada ou como ingrediente surpresa nas saladas do dia.
+                            </span>
+                            <div class="dish-rate">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <span>(5+)</span>
+                            </div>
+                            <div class="dish-price">
+                                <h4>R$ 3,50/maço</h4>
+                                <button class="btn-default">
+                                    <i class="fa-solid fa-basket-shopping"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="dish">
+                            <div class="dish-heart">
+                                <i class="fa-solid fa-heart"></i>
+                            </div>
+                            <img src="src/images/alcega.png" class="dish-image" alt="Alcega"
+                                data-nutritional="src/images/tabela_alcega.png">
+                            <h3 class="dish-title">
+                                Alcega
+                            </h3>
+                            <span class="dish-description">
+                                Crocante e fresquinha,
+                                é presença garantida nos pratos orientais
+                                e receitas leves que pedem um toque especial.
+                            </span>
+                            <div class="dish-rate">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <span>(5+)</span>
+                            </div>
+                            <div class="dish-price">
+                                <h4>R$ 5,00/unidade</h4>
+                                <button class="btn-default">
+                                    <i class="fa-solid fa-basket-shopping"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="dish">
+                            <div class="dish-heart">
+                                <i class="fa-solid fa-heart"></i>
+                            </div>
+                            <img src="src/images/salsinha.png" class="dish-image" alt="Salsinha"
+                                data-nutritional="src/images/tabela_salsinha.png">
+                            <h3 class="dish-title">
+                                Salsinha
+                            </h3>
+                            <span class="dish-description">
+                                Verde vibrante e cheia de aroma,
+                                a salsinha é a finalização perfeita
+                                para pratos cheios de afeto.
+                            </span>
+                            <div class="dish-rate">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <span>(5+)</span>
+                            </div>
+                            <div class="dish-price">
+                                <h4>R$ 2,50/maço</h4>
+                                <button class="btn-default">
+                                    <i class="fa-solid fa-basket-shopping"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="dish">
+                            <div class="dish-heart">
+                                <i class="fa-solid fa-heart"></i>
+                            </div>
+                            <img src="src/images/cebolinha.png" class="dish-image" alt="Cebolinha"
+                                data-nutritional="src/images/tabela_cebolinha.png">
+                            <h3 class="dish-title">
+                                Cebolinha
+                            </h3>
+                            <span class="dish-description">
+                                Cheiro verde com alma!
+                                Aromática, delicada e essencial
+                                para dar aquele saborzinho no final da receita.
+                            </span>
+                            <div class="dish-rate">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <span>(5+)</span>
+                            </div>
+                            <div class="dish-price">
+                                <h4>R$ 2,50/maço</h4>
+                                <button class="btn-default">
+                                    <i class="fa-solid fa-basket-shopping"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="dish">
+                            <div class="dish-heart">
+                                <i class="fa-solid fa-heart"></i>
+                            </div>
+                            <img src="src/images/beterraba.png" class="dish-image" alt="Beterraba"
+                                data-nutritional="src/images/tabela_beterraba.png">
+                            <h3 class="dish-title">
+                                Beterraba
+                            </h3>
+                            <span class="dish-description">
+                                Com cor intensa e sabor adocicado,
+                                a beterraba é uma fonte de energia e saúde.
+                                Ótima em saladas, sucos ou cozidos.
+                            </span>
+                            <div class="dish-rate">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <span>(5+)</span>
+                            </div>
+                            <div class="dish-price">
+                                <h4>R$ 4,80/kg</h4>
+                                <button class="btn-default">
+                                    <i class="fa-solid fa-basket-shopping"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="dish">
+                            <div class="dish-heart">
+                                <i class="fa-solid fa-heart"></i>
+                            </div>
+                            <img src="src/images/berinjela.png" class="dish-image" alt="Berinjela"
+                                data-nutritional="src/images/tabela_berinjela.png">
+                            <h3 class="dish-title">
+                                Berinjela
+                            </h3>
+                            <span class="dish-description">
+                                Textura macia e sabor marcante.
+                                Vai bem na grelha, em lasanhas
+                                ou pratos vegetarianos de dar água na boca.
+                            </span>
+                            <div class="dish-rate">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <span>(5+)</span>
+                            </div>
+                            <div class="dish-price">
+                                <h4>R$ 6,00/kg</h4>
+                                <button class="btn-default">
+                                    <i class="fa-solid fa-basket-shopping"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="dish">
+                            <div class="dish-heart">
+                                <i class="fa-solid fa-heart"></i>
+                            </div>
+                            <img src="src/images/pimentao.png" class="dish-image" alt="Pimentao"
+                                data-nutritional="src/images/tabela_pimentao.png">
+                            <h3 class="dish-title">
+                                Pimentão
+                            </h3>
+                            <span class="dish-description">
+                                Colorido e saboroso, perfeito para refogados e saladas.
+                                Colhido com carinho no armazém da Dona Lourdes.
+                            </span>
+                            <div class="dish-rate">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <span>(5+)</span>
+                            </div>
+                            <div class="dish-price">
+                                <h4>R$ 7,90/kg</h4>
+                                <button class="btn-default">
+                                    <i class="fa-solid fa-basket-shopping"></i>
+                                </button>
+                            </div>
+                        </div>
+
+
+                        <div class="dish">
+                            <div class="dish-heart">
+                                <i class="fa-solid fa-heart"></i>
+                            </div>
+                            <img src="src/images/mandioca.png" class="dish-image" alt="Mandioca"
+                                data-nutritional="src/images/tabela_ma.png">
+                            <h3 class="dish-title">
+                                Mandioca
+                            </h3>
+                            <span class="dish-description">
+                                Raiz firme e saborosa, perfeita para cozinhar,
+                                fritar ou preparar aquele bom caldo brasileiro.
+                                Direto da terra, com todo o cuidado da Dona Lourdes.
+                            </span>
+                            <div class="dish-rate">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <span>(5+)</span>
+                            </div>
+                            <div class="dish-price">
+                                <h4>R$ 5,90/kg</h4>
+                                <button class="btn-default">
+                                    <i class="fa-solid fa-basket-shopping"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FRUTAS -->
+                <div class="category" data-category="frutas">
+                    <div class="dishes">
+                        <div class="dish">
+                            <div class="dish-heart">
+                                <i class="fa-solid fa-heart"></i>
+                            </div>
+                            <img src="src/images/maca.png" class="dish-image" alt="Maçã">
+                            <h3 class="dish-title">
+                                Maçã
+                            </h3>
+                            <span class="dish-description">
+                                Maçãs fresquinhas e saborosas, direto do pomar para sua mesa.
+                            </span>
+                            <div class="dish-rate">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half-stroke"></i>
+                                <span>(8)</span>
+                            </div>
+                            <div class="dish-price">
+                                <h4>R$ 5,50/kg</h4>
+                                <button class="btn-default">
+                                    <i class="fa-solid fa-basket-shopping"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="dish">
+                            <div class="dish-heart">
+                                <i class="fa-solid fa-heart"></i>
+                            </div>
+                            <img src="src/images/banana.png" class="dish-image" alt="">
+                            <h3 class="dish-title">
+                                Banana
+                            </h3>
+                            <span class="dish-description">
+                                Docinha e sempre presente, a banana é o abraço no café da manhã.
+                                Vai do lanche à sobremesa com simplicidade e carinho.
+                                <div class="dish-rate">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <span>(5+)</span>
+                                </div>
+                                <div class="dish-price">
+                                    <h4>R$ 5,90/kg</h4>
+                                    <button class="btn-default">
+                                        <i class="fa-solid fa-basket-shopping"></i>
+                                    </button>
+                                </div>
+                        </div>
+
+                        <div class="dish">
+                            <div class="dish-heart">
+                                <i class="fa-solid fa-heart"></i>
+                            </div>
+                            <img src="src/images/abacaxi.png" class="dish-image" alt="">
+                            <h3 class="dish-title">
+                                Abacaxi
+                            </h3>
+                            <span class="dish-description">
+                                Refrescante e doce na medida,
+                                o abacaxi traz aquele gostinho tropical que alegra qualquer dia.
+                                <div class="dish-rate">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <span>(5+)</span>
+                                </div>
+                                <div class="dish-price">
+                                    <h4>R$ 7,60/unidade</h4>
+                                    <button class="btn-default">
+                                        <i class="fa-solid fa-basket-shopping"></i>
+                                    </button>
+                                </div>
+                        </div>
+
+                        <div class="dish">
+                            <div class="dish-heart">
+                                <i class="fa-solid fa-heart"></i>
+                            </div>
+                            <img src="src/images/manga.png" class="dish-image" alt="">
+                            <h3 class="dish-title">
+                                Manga
+                            </h3>
+                            <span class="dish-description">
+                                Doce e suculenta, a manga é pura festa no paladar.
+                                Da colheita direto pra sua sobremesa, cheia de cor e sabor.
+                                <div class="dish-rate">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <span>(5+)</span>
+                                </div>
+                                <div class="dish-price">
+                                    <h4>R$ 5,70/kg</h4>
+                                    <button class="btn-default">
+                                        <i class="fa-solid fa-basket-shopping"></i>
+                                    </button>
+                                </div>
+                        </div>
+
+
+                        <div class="dish">
+                            <div class="dish-heart">
+                                <i class="fa-solid fa-heart"></i>
+                            </div>
+                            <img src="src/images/maracuja.png" class="dish-image" alt="Maracujá"
+                                data-nutritional="src/images/tabela_batata.png">
+                            <h3 class="dish-title">
+                                Maracujá
+                            </h3>
+                            <span class="dish-description">
+                                Polpa vibrante e aroma marcante, direto do pé.
+                                O maracujá da Dona Lourdes é puro frescor e sabor,
+                            </span>
+                            <div class="dish-rate">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <span>(10+)</span>
+                            </div>
+                            <div class="dish-price">
+                                <h4>R$ 3,00</h4>
+                                <button class="btn-default">
+                                    <i class="fa-solid fa-basket-shopping"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="dish">
+                            <div class="dish-heart">
+                                <i class="fa-solid fa-heart"></i>
+                            </div>
+                            <img src="src/images/melancia.png" class="dish-image" alt="">
+                            <h3 class="dish-title">
+                                Melancia
+                            </h3>
+                            <span class="dish-description">
+                                Grande no tamanho e no frescor,
+                                a melancia é a alegria dos dias quentes.
+                                <div class="dish-rate">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <span>(5+)</span>
+                                </div>
+                                <div class="dish-price">
+                                    <h4>R$ 3,80/kg</h4>
+                                    <button class="btn-default">
+                                        <i class="fa-solid fa-basket-shopping"></i>
+                                    </button>
+                                </div>
+                        </div>
+
+                        <div class="dish">
+                            <div class="dish-heart">
+                                <i class="fa-solid fa-heart"></i>
+                            </div>
+                            <img src="src/images/mamao.png" class="dish-image" alt="">
+                            <h3 class="dish-title">
+                                Mamão
+                            </h3>
+                            <span class="dish-description">
+                                Suave e generoso, o mamão traz leveza pra mesa e pro corpo.
+                                <div class="dish-rate">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <span>(5+)</span>
+                                </div>
+                                <div class="dish-price">
+                                    <h4>R$ 5,20/kg</h4>
+                                    <button class="btn-default">
+                                        <i class="fa-solid fa-basket-shopping"></i>
+                                    </button>
+                                </div>
+                        </div>
+
+                        <div class="dish">
+                            <div class="dish-heart">
+                                <i class="fa-solid fa-heart"></i>
+                            </div>
+                            <img src="src/images/morango.png" class="dish-image" alt="">
+                            <h3 class="dish-title">
+                                Morango
+                            </h3>
+                            <span class="dish-description">
+                                Pequeno, doce e encantador.
+                                O morango é o mimo que transforma qualquer receita
+                                num carinho especial.
+                                <div class="dish-rate">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <span>(5+)</span>
+                                </div>
+                                <div class="dish-price">
+                                    <h4>R$ 9,00/bandeja</h4>
+                                    <button class="btn-default">
+                                        <i class="fa-solid fa-basket-shopping"></i>
+                                    </button>
+                                </div>
+                        </div>
+
+                        <div class="dish">
+                            <div class="dish-heart">
+                                <i class="fa-solid fa-heart"></i>
+                            </div>
+                            <img src="src/images/laranja.png" class="dish-image" alt="">
+                            <h3 class="dish-title">
+                                Laranja
+                            </h3>
+                            <span class="dish-description">
+                                Cheia de suco e afeto, a laranja é puro aconchego em forma de fruta
+                                <div class="dish-rate">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <span>(5+)</span>
+                                </div>
+                                <div class="dish-price">
+                                    <h4>R$ 3,30/kg</h4>
+                                    <button class="btn-default">
+                                        <i class="fa-solid fa-basket-shopping"></i>
+                                    </button>
+                                </div>
+                        </div>
+
+                        <div class="dish">
+                            <div class="dish-heart">
+                                <i class="fa-solid fa-heart"></i>
+                            </div>
+                            <img src="src/images/limao.png" class="dish-image" alt="">
+                            <h3 class="dish-title">
+                                Limão
+                            </h3>
+                            <span class="dish-description">
+                                Pequeno no tamanho, grande no sabor.
+                                O limão dá aquele toque especial nos pratos e bebidas
+                                <div class="dish-rate">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <span>(5+)</span>
+                                </div>
+                                <div class="dish-price">
+                                    <h4>R$ 4,75/kg</h4>
+                                    <button class="btn-default">
+                                        <i class="fa-solid fa-basket-shopping"></i>
+                                    </button>
+                                </div>
+                        </div>
+
+
+                        <div class="dish">
+                            <div class="dish-heart">
+                                <i class="fa-solid fa-heart"></i>
+                            </div>
+                            <img src="src/images/uva.png" class="dish-image" alt="uva">
+                            <h3 class="dish-title">
+                                Uva
+                            </h3>
+                            <span class="dish-description">
+                                A uva é aquela fruta que agrada todo mundo
+                                e deixa a mesa mais feliz.
+                                <div class="dish-rate">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <span>(5+)</span>
+                                </div>
+                                <div class="dish-price">
+                                    <h4>R$ 11,40/kg</h4>
+                                    <button class="btn-default">
+                                        <i class="fa-solid fa-basket-shopping"></i>
+                                    </button>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- GELEIAS E CREMES -->
+                <div class="category" data-category="geleias-e-cremes">
+                    <div class="dishes">
+                        <div class="dish">
+                            <div class="dish-heart">
+                                <i class="fa-solid fa-heart"></i>
+                            </div>
+                            <img src="src/images/geleiamorango.png" class="dish-image" alt="Geleias">
+                            <h3 class="dish-title">
+                                Geleia de Morango
+                            </h3>
+                            <span class="dish-description">
+                                Feita com morangos fresquinhos e muito carinho,
+                                essa geleia é puro aconchego no pão ou na sobremesa.
+                            </span>
+                            <div class="dish-rate">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <span>(+5)</span>
+                            </div>
+                            <div class="dish-price">
+                                <h4>R$ 14,30/250g</h4>
+                                <button class="btn-default">
+                                    <i class="fa-solid fa-basket-shopping"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="dish">
+                            <div class="dish-heart">
+                                <i class="fa-solid fa-heart"></i>
+                            </div>
+                            <img src="src/images/geleiadepimenta.png" class="dish-image" alt="Geleias">
+                            <h3 class="dish-title">
+                                Geleia de Pimenta
+                            </h3>
+                            <span class="dish-description">
+                                Um doce com personalidade! Picante na medida,
+                                perfeita pra dar aquele toque especial nos pratos e petiscos.
+                            </span>
+                            <div class="dish-rate">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <span>(+5)</span>
+                            </div>
+                            <div class="dish-price">
+                                <h4>R$ 15,70/200g</h4>
+                                <button class="btn-default">
+                                    <i class="fa-solid fa-basket-shopping"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="dish">
+                            <div class="dish-heart">
+                                <i class="fa-solid fa-heart"></i>
+                            </div>
+                            <img src="src/images/geleiadegoiaba.png" class="dish-image" alt="Geleias">
+                            <h3 class="dish-title">
+                                Geleia de Goiaba
+                            </h3>
+                            <span class="dish-description">
+                                Doce tradição brasileira,
+                                perfeita pra acompanhar um queijo branco
+                                e reviver memórias de interior.
+                            </span>
+                            <div class="dish-rate">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <span>(+5)</span>
+                            </div>
+                            <div class="dish-price">
+                                <h4>R$ 13,80/250g</h4>
+                                <button class="btn-default">
+                                    <i class="fa-solid fa-basket-shopping"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="dish">
+                            <div class="dish-heart">
+                                <i class="fa-solid fa-heart"></i>
+                            </div>
+                            <img src="src/images/geleiademaracuja.png" class="dish-image" alt="Geleias">
+                            <h3 class="dish-title">
+                                Geleia de Maracujá
+                            </h3>
+                            <span class="dish-description">
+                                Agridoce e envolvente,
+                                com o sabor exato que lembra tardes de verão na varanda.
+                            </span>
+                            <div class="dish-rate">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <span>(+5)</span>
+                            </div>
+                            <div class="dish-price">
+                                <h4>R$ 14,25/250g</h4>
+                                <button class="btn-default">
+                                    <i class="fa-solid fa-basket-shopping"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="dish">
+                            <div class="dish-heart">
+                                <i class="fa-solid fa-heart"></i>
+                            </div>
+                            <img src="src/images/geleiadefrutas.png" class="dish-image" alt="Geleias">
+                            <h3 class="dish-title">
+                                Geleia de Frutas Veremlhas
+                            </h3>
+                            <span class="dish-description">
+                                Intensa e aromática, mistura amoras,
+                                morangos e framboesas como um
+                                abraço quente em manhã fria.
+                            </span>
+                            <div class="dish-rate">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <span>(+5)</span>
+                            </div>
+                            <div class="dish-price">
+                                <h4>R$ 15,25/250g</h4>
+                                <button class="btn-default">
+                                    <i class="fa-solid fa-basket-shopping"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="dish">
+                            <div class="dish-heart">
+                                <i class="fa-solid fa-heart"></i>
+                            </div>
+                            <img src="src/images/geleiadeuva.png" class="dish-image" alt="Geleias">
+                            <h3 class="dish-title">
+                                Geleia de Uva
+                            </h3>
+                            <span class="dish-description">
+                                Sabor marcante e doce na medida certa.
+                                Vai bem com queijos ou direto na colher,
+                                como quem volta à infância.
+                            </span>
+                            <div class="dish-rate">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <span>(+5)</span>
+                            </div>
+                            <div class="dish-price">
+                                <h4>R$ 12,25/250g</h4>
+                                <button class="btn-default">
+                                    <i class="fa-solid fa-basket-shopping"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="dish">
+                            <div class="dish-heart">
+                                <i class="fa-solid fa-heart"></i>
+                            </div>
+                            <img src="src/images/docedeleite.png" class="dish-image" alt="Geleias"
+                                data-nutritional="src/images/tabela_docedeleite.png">
+                            <h3 class="dish-title">
+                                Doce de Leite
+                            </h3>
+                            <span class="dish-description">
+                                Tradicional, macio e feito com calma,
+                                como manda a receita da Dona Lourdes.
+                                Aquele gostinho que não se esquece.
+                            </span>
+                            <div class="dish-rate">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <span>(+5)</span>
+                            </div>
+                            <div class="dish-price">
+                                <h4>R$ 16,15/400g</h4>
+                                <button class="btn-default">
+                                    <i class="fa-solid fa-basket-shopping"></i>
+                                </button>
+                            </div>
+                        </div>
+
+
+                        <div class="dish">
+                            <div class="dish-heart">
+                                <i class="fa-solid fa-heart"></i>
+                            </div>
+                            <img src="src/images/cremedeamendoim.png" class="dish-image" alt="Geleias"
+                                data-nutritional="src/images/tabela_cremedeamendoim.png">
+                            <h3 class="dish-title">
+                                Creme de Amendoim
+                            </h3>
+                            <span class="dish-description">
+                                Rico, nutritivo e cheio de sabor.
+                                Vai bem com frutas, torradas ou como recheio.
+                                Energia boa e sabor da roça.
+                            </span>
+                            <div class="dish-rate">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <span>(+5)</span>
+                            </div>
+                            <div class="dish-price">
+                                <h4>R$ 17,60/500g</h4>
+                                <button class="btn-default">
+                                    <i class="fa-solid fa-basket-shopping"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="dish">
+                            <div class="dish-heart">
+                                <i class="fa-solid fa-heart"></i>
+                            </div>
+                            <img src="src/images/cremedeavela.png" class="dish-image" alt="Geleias"
+                                data-nutritional="src/images/tabela_cremedeavela.png">
+                            <h3 class="dish-title">
+                                Creme de Avelã
+                            </h3>
+                            <span class="dish-description">
+                                Cremoso, doce e irresistível.
+                                Ideal pra espalhar no pão ou saborear de colherzinha.
+                                Um mimo pra alma.
+                            </span>
+                            <div class="dish-rate">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <span>(+5)</span>
+                            </div>
+                            <div class="dish-price">
+                                <h4>R$ 18,90/350g</h4>
+                                <button class="btn-default">
+                                    <i class="fa-solid fa-basket-shopping"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PÃES E QUITUTES -->
+                <div class="category" data-category="paes-e-quitutes">
+                    <div class="dishes">
+                        <div class="dish">
+                            <div class="dish-heart">
+                                <i class="fa-solid fa-heart"></i>
+                            </div>
+                            <img src="src/images/queijominas.png" class="dish-image" alt="">
+                            <h3 class="dish-title">
+                                Queijo Minas Frescal
+                            </h3>
+                            <span class="dish-description">
+                                Macio, fresco e com aquele sabor suave que derrete na boca.
+                                Receita tradicional mineira.
+                            </span>
+                            <div class="dish-rate">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <span>(500+)</span>
+                            </div>
+                            <div class="dish-price">
+                                <h4>R$26,60/kg</h4>
+                                <button class="btn-default">
+                                    <i class="fa-solid fa-basket-shopping"></i>
+                                </button>
+                            </div>
+                        </div>
+
+
+                        <div class="dish">
+                            <div class="dish-heart">
+                                <i class="fa-solid fa-heart"></i>
+                            </div>
+                            <img src="src/images/queijomucarela.png" class="dish-image" alt="">
+                            <h3 class="dish-title">
+                                Queijo Muçarela
+                            </h3>
+                            <span class="dish-description">
+                                Derrete fácil e tem sabor marcante.
+                                Vai bem nos lanches, nas pizzas ou
+                                numa tábua de queijos feita com amor.
+                            </span>
+                            <div class="dish-price">
+                                <h4>R$35,15/kg</h4>
+                                <button class="btn-default">
+                                    <i class="fa-solid fa-basket-shopping"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="dish">
+                            <div class="dish-heart">
+                                <i class="fa-solid fa-heart"></i>
+                            </div>
+                            <img src="src/images/paocomgoiabada.png" class="dish-image" alt="">
+                            <h3 class="dish-title">
+                                Pão de Leite com Goiabada
+                            </h3>
+                            <span class="dish-description">
+                                Uma combinação perfeita de massa macia e
+                                recheio de goiabada. Doce lembrança da infância.
+                            </span>
+                            <div class="dish-price">
+                                <h4>R$3,80/unidade</h4>
+                                <button class="btn-default">
+                                    <i class="fa-solid fa-basket-shopping"></i>
+                                </button>
+                            </div>
+                        </div>
+
+
+                        <div class="dish">
+                            <div class="dish-heart">
+                                <i class="fa-solid fa-heart"></i>
+                            </div>
+                            <img src="src/images/paofrances.png" class="dish-image" alt="">
+                            <h3 class="dish-title">
+                                Pão Francês
+                            </h3>
+                            <span class="dish-description">
+                                Crocante por fora, macio por dentro.
+                                O clássico de todos os cafés da manhã,
+                                feito com cuidado e tradição.
+                            </span>
+                            <div class="dish-price">
+                                <h4>R$16,15/kg</h4>
+                                <button class="btn-default">
+                                    <i class="fa-solid fa-basket-shopping"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="dish">
+                            <div class="dish-heart">
+                                <i class="fa-solid fa-heart"></i>
+                            </div>
+                            <img src="src/images/paodeleite.png" class="dish-image" alt="Quitutes"
+                                data-nutritional="src/images/tabela_paodeleitetradicional.png">
+                            <h3 class="dish-title">
+                                Pão de Leite
+                            </h3>
+                            <span class="dish-description">
+                                Macio, levemente doce e cheio de carinho.
+                                Lembra pão saindo do forno em dia de visita.
+                            </span>
+                            <div class="dish-price">
+                                <h4>R$2,35/unidade</h4>
+                                <button class="btn-default">
+                                    <i class="fa-solid fa-basket-shopping"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="dish">
+                            <div class="dish-heart">
+                                <i class="fa-solid fa-heart"></i>
+                            </div>
+                            <img src="src/images/coxinhafango.png" class="dish-image" alt="">
+                            <h3 class="dish-title">
+                                Coxinha de Frango
+                            </h3>
+                            <span class="dish-description">
+                                Casquinha crocante,
+                                recheio bem temperado e
+                                muito amor em cada mordida.
+                            </span>
+                            <div class="dish-price">
+                                <h4>R$6,65/unidade</h4>
+                                <button class="btn-default">
+                                    <i class="fa-solid fa-basket-shopping"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="dish">
+                            <div class="dish-heart">
+                                <i class="fa-solid fa-heart"></i>
+                            </div>
+                            <img src="src/images/esfirracarne.png" class="dish-image" alt="">
+                            <h3 class="dish-title">
+                                Esfirra de Carne
+                            </h3>
+                            <span class="dish-description">
+                                Massa macia e recheio suculento.
+                            </span>
+                            <div class="dish-price">
+                                <h4>R$5,70/unidade</h4>
+                                <button class="btn-default">
+                                    <i class="fa-solid fa-basket-shopping"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="dish">
+                            <div class="dish-heart">
+                                <i class="fa-solid fa-heart"></i>
+                            </div>
+                            <img src="src/images/enroladinho.png" class="dish-image" alt="">
+                            <h3 class="dish-title">
+                                Enroladinho de Salsicha
+                            </h3>
+                            <span class="dish-description">
+                                Lanche rápido, gostoso e sempre bem-vindo.
+                                Ideal pra dividir com a criançada
+                                (ou guardar só pra você).
+                            </span>
+                            <div class="dish-price">
+                                <h4>R$6,20/unidade</h4>
+                                <button class="btn-default">
+                                    <i class="fa-solid fa-basket-shopping"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="dish">
+                            <div class="dish-heart">
+                                <i class="fa-solid fa-heart"></i>
+                            </div>
+                            <img src="src/images/bisccoitoamanteigado.png" class="dish-image" alt="">
+                            <h3 class="dish-title">
+                                Biscoito Amanteigado
+                            </h3>
+                            <span class="dish-description">
+                                Leve, macio e com gosto de casa de vó.
+                                Derrete na boca e pede um cafezinho ao lado.
+                            </span>
+                            <div class="dish-price">
+                                <h4>R$9,50/250g</h4>
+                                <button class="btn-default">
+                                    <i class="fa-solid fa-basket-shopping"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="dish">
+                            <div class="dish-heart">
+                                <i class="fa-solid fa-heart"></i>
+                            </div>
+                            <img src="src/images/biscoitogoiaba.png" class="dish-image" alt="">
+                            <h3 class="dish-title">
+                                Biscoito de Goiabada
+                            </h3>
+                            <span class="dish-description">
+                                Crocante por fora, recheado com goiabada no meio.
+                                Um pedacinho de alegria em cada mordida.
+                            </span>
+                            <div class="dish-price">
+                                <h4>R$10,45/250g</h4>
+                                <button class="btn-default">
+                                    <i class="fa-solid fa-basket-shopping"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+       <!-- CARROSSEL DE IMAGENS -->
+<div class="carousel">
+    <div class="slides">
+        <img src="src/images/cestasemanal.png" alt="Slide 1"
+            onclick="window.open('https://wa.me/554391422338?text=Ol%C3%A1%2C%20Dona%20Lourdes!%20Quero%20montar%20minha%20cesta%20semanal%20%F0%9F%98%8A', '_blank')">
+        <img src="src/images/fretegratis.png" alt="Slide 2"
+            onclick="window.open('https://link-da-segunda-imagem.com', '_blank')">
+        <img src="src/images/cidadesvizinhas.png" alt="Slide 3"
+            onclick="window.open('https://link-da-terceira-imagem.com', '_blank')">
+        <img src="src/images/redessociais.png" alt="Slide 4"
+            onclick="window.open('https://www.instagram.com/horti_lourdes?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==', '_blank')">
+    </div>
+
+    <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+    <button class="next" onclick="changeSlide(1)">&#10095;</button>
+
+    <div class="dots">
+        <span class="dot active" onclick="currentSlide(0)"></span>
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span> <!-- Adicionada -->
+    </div>
+</div>
+
+
+
+        <!-- A HISTÓRIA DE DONA LOURDES -->
+        <section id="dona-lourdes" style="background-color: #A67C52; padding: 20px;">
+            <img src="src/images/dona-lourdes.png" id="chef-lourdes" alt="Dona Lourdes"
+                style="width: 70% !important; height: auto !important; display: block !important; margin: 20px auto !important;">
+
+            <div id="historia-content">
+                <h2 class="section-title">
+                    O coração por trás do Armazém do Sítio
+                </h2>
+                <h3 class="section-subtitle">
+                    A história de Dona Lourdes
+                </h3>
+
+                <div id="historia-texto">
+                    <p>
+                        Lourdes, aos 58 anos, é a alma por trás do Armazém do Sítio — HortiLourdes,
+                        um cantinho acolhedor onde o aroma do pão caseiro e o frescor das frutas
+                        trazem conforto e memórias.
+                    </p>
+                    <p>
+                        Viúva há alguns anos, Lourdes conheceu a dor da solidão cedo demais.
+                        Seu marido, Antônio, foi seu grande amor e parceiro de vida no sítio
+                        que construíram juntos. Quando ele partiu, ela pensou que jamais teria
+                        forças para recomeçar. A terra parecia seca, o armazém — que era apenas
+                        um sonho antigo — parecia distante, e o coração, vazio.
+                    </p>
+                    <p>
+                        Mas, em vez de se entregar à dor,
+                        resgatou antigas receitas da família e
+                        transformou sua saudade em força.
+                    </p>
+                    <p>
+                        Assim nasceu o HortiLourdes, um espaço onde cada produto carrega história, carinho e tradição.
+                        Mais do que vender alimentos artesanais, Lourdes oferece acolhimento.
+                        Para ela, cada receita é uma lembrança viva, e cada gesto no armazém
+                        é uma forma de manter o amor em movimento.
+                    </p>
+                    <p>
+                        Porque final feliz não é sorte — é colheita.
+                        E Dona Lourdes colhe amor todos os dias.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- REPRESENTANTES -->
+        <section id="representantes">
+            <h2 class="section-title">Quem somos nós</h2>
+            <h3 class="section-subtitle">
+                Conheça os representantes do HortiLourdes em cada cidade
+            </h3>
+
+            <div class="representante-container">
+                <div class="representante">
+                    <img src="src/images/fabiorepresentante.png" alt="Fábio - Santa Mônica">
+                    <p><strong>Fábio</strong><br><small>Representante de Santa Mônica</small></p>
+                </div>
+
+                <div class="representante">
+                    <img src="src/images/jessicarepresentante.png" alt="Jéssica - Santa Isabel do Ivaí">
+                    <p><strong>Jéssica</strong><br><small>Representante de Santa Isabel do Ivaí</small></p>
+                </div>
+
+                <div class="representante">
+                    <img src="src/images/cristinarepresentante.png" alt="Cristina - São Pedro do Paraná">
+                    <p><strong>Cristina</strong><br><small>Representante de São Pedro do Paraná</small></p>
+                </div>
+
+                <div class="representante">
+                    <img src="src/images/andrerepresentante.png" alt="André - Loanda">
+                    <p><strong>André</strong><br><small>Entregador de Loanda</small></p>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- BARRA FINAL -->
+        <footer>
+            <img src="src/images/wave.svg" alt="">
+
+            <div id="footer_items">
+                <span id="copyright">
+                    &copy 2025 Sarah Eloisa
+                </span>
+
+                <div class="social-media-buttons">
+                    <a href="">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+
+                    <a href="">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a href="">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+                </div>
+            </div>
+        </footer>
+
+
+
+        <!-- ÁREA DA DONA LOURDES -->
+        <button id="btnLogin">Área da Dona Lourdes</button>
+
+
+        <div id="loginModal"
+            style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.7);">
+            <div style="background:white; padding:20px; max-width:300px; margin:100px auto; text-align:center;">
+                <h2>Login</h2>
+                <input type="password" id="senhaInput" placeholder="Digite a senha">
+                <br><br>
+                <button onclick="fazerLogin()">Entrar</button>
+                <button onclick="fecharModal()">Cancelar</button>
+            </div>
+        </div>
+
+        <script>
+            const senhaCorreta = "lourdeseantonio"; // Alteração de senha aqui!
+
+            document.getElementById('btnLogin').onclick = function () {
+                document.getElementById('loginModal').style.display = 'block';
+            }
+
+            function fecharModal() {
+                document.getElementById('loginModal').style.display = 'none';
+            }
+
+            function fazerLogin() {
+                const senha = document.getElementById('senhaInput').value;
+                if (senha === senhaCorreta) {
+                    window.location.href = "gestao.html";
+                } else {
+                    alert("Senha incorreta!");
+                }
+            }
+        </script>
+
+
+        <!-- PRÉVIA DO CARRINHO -->
+        <div id="cart" class="cart">
+            <button id="fechar-carrinho"
+                style="position: absolute; top: 10px; right: 10px; background: none; border: none; font-size: 20px; cursor: pointer;">&times;</button>
+            <h2>Seu Carrinho</h2>
+            <ul id="cart-items"></ul>
+            <p>Total: <span id="cart-total">R$ 0,00</span></p>
+            <button id="clear-cart" class="btn-default">Esvaziar Carrinho</button>
+            <button id="btn-finalizar-carrinho" class="btn-default">Finalizar Pedido</button>
+            <div id="checkout" style="display: none; margin-top: 20px;"></div>
+        </div>
+
+        <script>
+            ScrollReveal().reveal('#cta', {
+                origin: 'left',
+                distance: '50px',
+                duration: 2000,
+                reset: true
+            });
+        </script>
+
+        <button id="cart-toggle" class="btn-default" style="position: fixed; bottom: 20px; right: 20px;">
+            <i class="fa-solid fa-cart-shopping"></i>&nbsp; Ver Carrinho
+        </button>
+
+        <!-- MODAL DE INFORMAÇÕES DO CLIENTE -->
+        <div id="info-modal" class="modal-overlay" style="display: none;">
+            <div class="modal-content">
+                <h2>Informações para entrega</h2>
+
+                <label for="nome-cliente">Nome:</label>
+                <input type="text" id="nome-cliente" required>
+
+                <label for="cidade-cliente">Cidade:</label>
+                <select id="cidade-cliente" required>
+                    <option value="">Selecione sua cidade</option>
+                    <option value="Loanda">Loanda</option>
+                    <option value="Santa Mônica">Santa Mônica</option>
+                    <option value="Santa Isabel do Ivaí">Santa Isabel do Ivaí</option>
+                    <option value="São Pedro do Paraná">São Pedro do Paraná</option>
+                </select>
+
+                <label for="telefone-cliente">Telefone (com DDD):</label>
+                <input type="tel" id="telefone-cliente" required placeholder="(DDD) 91234-5678">
+
+                <label for="endereco-cliente">Endereço:</label>
+                <input type="text" id="endereco-cliente" placeholder="Rua, número, complemento" required>
+
+                <button id="proximo-pagamento" class="btn-confirm">Próximo</button>
+                <button id="fechar-info" class="btn-cancel">Cancelar</button>
+            </div>
+        </div>
+
+
+        <!-- MODAL DE PAGAMENTO -->
+        <div id="payment-modal" class="modal-overlay" style="display: none;">
+            <div class="modal-content">
+
+                <div id="resumo-pedido" class="resumo-pedido" style="margin-bottom: 20px;">
+                    <h3>Resumo do Pedido</h3>
+                    <ul id="resumo-itens" style="list-style: none; padding-left: 0;"></ul>
+                    <p><strong>Total:</strong> <span id="resumo-total">R$ 0,00</span></p>
+                </div>
+
+                <h2>Escolha a forma de pagamento</h2>
+
+                <div class="payment-option">
+                    <label><input type="radio" name="payment-method" value="pix"> PIX </label>
+                    <div id="pix-info" style="display: none; margin-top: 20px;">
+                        <img src="src/images/qrcodedonalourdes.png" alt="QR Code PIX"
+                            style="max-width: 200px; display: block; margin-bottom: 10px;">
+                        <p style="margin-bottom: 10px;">
+                            Após o pagamento via PIX, clique em <strong>"Enviar para Dona Lourdes".</strong><br>
+                            📎 Você será redirecionado para o WhatsApp e poderá <strong>anexar o comprovante</strong>
+                            diretamente na conversa.
+                        </p>
+                    </div>
+
+                </div>
+                <div class="payment-option">
+                    <label><input type="radio" name="payment-method" value="dinheiro"> Dinheiro (Pagar na
+                        entrega)</label>
+                </div>
+                <div class="payment-option">
+                    <label><input type="radio" name="payment-method" value="cartao"> Cartão (Pagar na entrega)</label>
+                </div>
+                <div class="payment-option">
+                    <label><input type="radio" name="payment-method" value="retirada"> Retirada no local (Pagar no
+                        ato)</label>
+                </div>
+
+                <div id="troco-section" style="display: none; margin-top: 15px;">
+                    <label>Troco para:
+                        <input type="number" id="troco-valor" placeholder="Ex: 100.00">
+                    </label>
+                    <label style="margin-left: 10px;">
+                        <input type="checkbox" id="sem-troco"> Não preciso de troco
+                    </label>
+                </div>
+
+                <button id="confirmar-pagamento" class="btn-confirm">Enviar para a Dona Lourdes</button>
+                <button id="fechar-modal" class="btn-cancel">Cancelar</button>
+            </div>
+        </div>
+
+        <script>
+            ScrollReveal().reveal('.title, .description, #cta_buttons, .social-media-buttons', {
+                origin: 'top',
+                distance: '50px',
+                duration: 2000,
+                reset: true
+            });
+        </script>
+
+
+
+        <!-- AREA DE PREÇOS E DISPONIBILADE AQUI!! -->
+        <script src="produtos.js"></script>
+        <script>
+            function carregarProdutos() {
+                const area = document.getElementById('produtosArea');
+                if (!area) return;
+
+                let html = '';
+
+                if (produtos && produtos.length > 0) {
+                    produtos.forEach(produto => {
+                        html += `
+            <div class="produto-item">
+              <strong>${produto.nome}</strong><br>
+              Preço: R$ ${produto.preco.toFixed(2)}<br>
+              ${produto.disponivel ? 'Disponível' : 'Indisponível'}
+            </div>
+            <hr>
+          `;
+                    });
+                } else {
+                    html = '<p>Nenhum produto disponível no momento.</p>';
+                }
+
+                area.innerHTML = html;
+            }
+
+            document.addEventListener('DOMContentLoaded', carregarProdutos);
+        </script>
+
+
+        <script>
+            const produtosSalvos = localStorage.getItem('produtos');
+            if (produtosSalvos) {
+                produtos = JSON.parse(produtosSalvos);
+            }
+        </script>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                function aplicarDisponibilidade() {
+                    document.querySelectorAll('.dish').forEach(card => {
+                        const titulo = card.querySelector('.dish-title')?.innerText.trim();
+                        const produto = produtos.find(p => p.nome === titulo);
+
+                        if (produto && !produto.disponivel) {
+                            card.style.opacity = '0.5';
+                            const botaoCompra = card.querySelector('.btn-default');
+                            if (botaoCompra) botaoCompra.style.display = 'none';
+
+                            const title = card.querySelector('.dish-title');
+                            const desc = card.querySelector('.dish-description');
+                            const preco = card.querySelector('.dish-price h4');
+
+                            if (title) title.style.color = '#888';
+                            if (desc) desc.style.color = '#aaa';
+                            if (preco) preco.style.color = '#888';
+
+                            if (!card.querySelector('.selo-indisponivel')) {
+                                const selo = document.createElement('div');
+                                selo.textContent = 'Indisponível';
+                                selo.className = 'selo-indisponivel';
+                                selo.style.backgroundColor = '#a00';
+                                selo.style.color = 'white';
+                                selo.style.padding = '5px';
+                                selo.style.fontSize = '12px';
+                                selo.style.position = 'absolute';
+                                selo.style.top = '10px';
+                                selo.style.right = '10px';
+                                selo.style.borderRadius = '5px';
+                                selo.style.zIndex = '10';
+                                card.style.position = 'relative';
+                                card.appendChild(selo);
+                            }
+                        }
+                        if (produto) {
+                            const precoElem = card.querySelector('.dish-price h4');
+                            if (precoElem) precoElem.innerText = `R$ ${produto.preco.toFixed(2)}`;
+                        }
+                    });
+                }
+
+                aplicarDisponibilidade();
+
+                // Categoria DE navegação
+                document.querySelectorAll('.category-button').forEach(button => {
+                    button.addEventListener('click', function () {
+                        const category = this.getAttribute('data-category');
+
+                        document.querySelectorAll('.category').forEach(cat => {
+                            cat.style.display = cat.getAttribute('data-category') === category ? 'block' : 'none';
+                        });
+
+                        document.querySelectorAll('.category-button').forEach(btn => btn.classList.remove('active'));
+                        this.classList.add('active');
+
+                        aplicarDisponibilidade(); // Aplica ao trocar de categoria
+                    });
+                });
+
+                // Exibe apenas a primeira categoria ao iniciar
+                document.querySelectorAll('.category').forEach((cat, idx) => {
+                    cat.style.display = idx === 0 ? 'block' : 'none';
+                });
+            });
+        </script>
+
+        <div id="nutritionalModal" class="modal" style="display: none;">
+            <div class="modal-content">
+                <span class="close-btn">&times;</span>
+                <h3>TABELA NUTRICIONAL</h3>
+                <img src="" id="modalImage" alt="Tabela Nutricional">
+            </div>
+        </div>
+
+        <script>
+  const telefoneInput = document.getElementById("telefone-cliente");
+
+  telefoneInput.addEventListener("input", function () {
+    let value = this.value.replace(/\D/g, ""); // Remove tudo que não for número
+
+    if (value.length > 11) {
+      value = value.slice(0, 11); // Limita a 11 dígitos
+    }
+
+    if (value.length > 0) {
+      value = "(" + value;
+    }
+    if (value.length > 3) {
+      value = value.slice(0, 3) + ") " + value.slice(3);
+    }
+    if (value.length > 10) {
+      value = value.slice(0, 10) + "-" + value.slice(10);
+    }
+
+    this.value = value;
+  });
+</script>
+
+
+        <script src="src/javascript/script.js"></script>
+
+</body>
+
+</html>
