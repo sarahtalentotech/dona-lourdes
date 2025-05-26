@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Gestão de Produtos - Dona Lourdes</title>
+  <script src="produtos.js"></script> <!-- Lista de produtos -->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    #top-buttons {
+      margin-bottom: 20px;
+    }
+
+    button {
+      margin: 5px;
+      padding: 10px;
+    }
+
+    .produto-item {
+      margin-bottom: 15px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Bom dia, Dona Lourdes! Vamos vender muito hoje?</h1>
+
+  <div id="top-buttons">
+    <button onclick="marcarTodos(true)">Marcar todos como Disponíveis ✅</button>
+    <button onclick="marcarTodos(false)">Desmarcar todos ❌</button>
+  </div>
+
+  <div id="produtosArea"></div>
+
+  <button onclick="salvarProdutos()">Salvar Alterações</button>
+
+  <script>
+    // Certifique-se de que o arquivo produtos.js já declarou a variável produtos corretamente
+    // Não declare novamente a variável produtos aqui, ela já deve existir vindo de produtos.js
+
+    // Função para carregar os produtos e exibir os campos para editar preço e disponibilidade
+    function carregarProdutos() {
+      let html = '';
+      produtos.forEach((produto, index) => {
+        html += `
+          <div class="produto-item">
+            <strong>${produto.nome}</strong><br>
+            Preço: R$ <input type="any" step="0.01" value="${produto.preco}" onchange="atualizarPreco(${index}, this.value)">
+            Disponível: <input type="checkbox" ${produto.disponivel ? 'checked' : ''} onchange="atualizarDisponibilidade(${index}, this.checked)">
+          </div>
+          <hr>
+        `;
+      });
+      document.getElementById('produtosArea').innerHTML = html;
+    }
+
+    // Função para atualizar o preço do produto
+    function atualizarPreco(index, inputValue) {
+      const valor = parseFloat(inputValue);
+      if (!isNaN(valor)) {
+        produtos[index].preco = valor;
+      }
+    }
+
+    // Função para atualizar a disponibilidade do produto
+    function atualizarDisponibilidade(index, status) {
+      produtos[index].disponivel = status;
+    }
+
+    // Função para salvar as alterações no localStorage
+    function salvarProdutos() {
+      localStorage.setItem('produtos', JSON.stringify(produtos));
+      alert('Alterações salvas com sucesso! Bons negócios, Dona Lourdes! 🌻');
+    }
+
+    // Função para marcar todos os produtos como disponíveis ou indisponíveis
+    function marcarTodos(status) {
+      produtos.forEach(produto => produto.disponivel = status);
+      carregarProdutos();
+    }
+
+    // Carregar os produtos ao abrir a página
+    carregarProdutos();
+  </script>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Painel da Dona Lourdes</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <header>
+    <h1>📋 Painel de Pedidos</h1>
+    <div class="filtros">
+      <input type="text" id="filtroNome" placeholder="🔍 Buscar por nome...">
+      <select id="filtroStatus">
+        <option value="">Filtrar por status</option>
+        <option value="Pendente">🟡 Pendente</option>
+        <option value="Aceito">🟢 Aceito</option>
+        <option value="Saiu">🛵 Saiu</option>
+        <option value="Entregue">✅ Entregue</option>
+        <option value="Cancelado">❌ Cancelado</option>
+      </select>
+      <button id="limparHistorico">🗑️ Limpar histórico</button>
+    </div>
+  </header>
+
+  <main id="listaPedidos">
+    <!-- Os pedidos serão inseridos aqui via JavaScript -->
+  </main>
+
+  <script src="gestao.js"></script>
+</body>
+</html>
+
+
